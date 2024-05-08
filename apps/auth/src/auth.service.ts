@@ -4,7 +4,7 @@ import { User } from '../type';
 import { SuccessResponse } from 'utils/response';
 
 import { JwtPayload } from '../../../guards/jwt.strategy';
-import { ConfigService } from '@nestjs/config';
+
 
 @Injectable()
 export class AuthService {
