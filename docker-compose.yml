@@ -1,0 +1,41 @@
+version : '3'
+services :
+ rabbitmq :
+    image : rabbitmq:3-management
+    container_name : rabbitmq
+    volumes :
+      - /var/lib/rabbitmq
+    ports :
+      - '5672:5672'
+      - '15672:15672'
+  api :
+    build :
+      context : .
+      dockerfile : ./apps/api/dockerfile
+    depends_on :
+      - rabbitmq
+    volumes :
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    ports :
+      - '4000:4000'
+  auth :
+    build :
+      context : .
+      dockerfile : ./apps/auth/dockerfile
+    command : npm run start auth
+  user :
+    build :
+      context : .
+      dockerfile : ./apps/user/dockerfile
+    command : npm run start user
+  bookings :
+    build :
+      context : .
+      dockerfile : ./apps/bookings/dockerfile
+    command : npm run start bookings
+  reservations :
+    buildb:
+      context : .
+      dockerfile : ./apps/reservations/dockerfile
+    command : npm run start reservations

@@ -1,0 +1,12 @@
+export const JWT = 'JWT';
+export const RABBITMQ_USER_QUEUE = 'user_queue';
+export const RABBITMQ_AUTH_QUEUE = 'auth_queue';
+export const RABBITMQ_BOOKINGS_QUEUE = 'booking_queue';
+export const RABBITMQ_RESERVATIONS_QUEUE = 'reservation_queue';
+export const RABBITMQ_RESERVATIONS_SERVICE = 'reservation_service';
+export const RABBITMQ_USER_SERVICE = 'user_service';
+export const RABBITMQ_API_QUEUE = 'api_queue';
+export const RABBITMQ_API_SERVICE = 'api_service';
+export const RABBITMQ_AUTH_SERVICE = 'auth_service';
+export const RABBITMQ_BOOKINGS_SERVICE = 'booking_service';
+export const APP_GATEWAY = 'APP_GATEWAY';
