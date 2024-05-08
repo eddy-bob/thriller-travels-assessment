@@ -4,42 +4,32 @@
 $ yarn install
 ```
 
-## Starting rabbitMQ
+## Running app without docker
 
 Ensure to already have
 
 rabbitMQ installed on your local machine else run the code below to to spin up a rabbitMQ docker container
 
 ```bash
-$ cd api
- $ yarn rabbitMQ:start
+$ cd  apps/api
+ $ yarn start
 ```
 
-## Stopping rabbitMQ
+## Running app with docker
 
 ```bash
- $ yarn rabbitMQ:stop
+#spinning up the entire app 
+ $ yarn container:start
+
+ #spinning down the entire app 
+ $ yarn container:stop
 ```
 
-## Running the app
+## Running the app in development without docker
 
 ```bash
-$ yarn run start
 
 # watch mode
-$ yarn run start:dev
-
-# production mode
-$ yarn run start:prod
+$ yarn start:dev
 ```
 
-```bash
-# development
-$ yarn run start
-
-# watch mode
-$ yarn run start:dev
-
-# production mode
-$ yarn run start:prod
-```

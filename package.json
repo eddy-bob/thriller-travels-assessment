@@ -18,8 +18,8 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./apps/api/test/jest-e2e.json",
-    "rabbitMQ:start": "docker compose up",
-    "rabbitMQ:stop": "docker compose down"
+    "container:start": "docker compose up",
+    "container:stop": "docker compose down"
   },
   "dependencies": {
     "@nestjs/common": "*",
