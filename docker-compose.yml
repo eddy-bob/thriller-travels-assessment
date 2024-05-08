@@ -23,19 +23,16 @@ services :
     build :
       context : .
       dockerfile : ./apps/auth/dockerfile
-    command : npm run start auth
   user :
     build :
       context : .
       dockerfile : ./apps/user/dockerfile
-    command : npm run start user
   bookings :
     build :
       context : .
       dockerfile : ./apps/bookings/dockerfile
-    command : npm run start bookings
   reservations :
-    buildb:
+    build :
       context : .
       dockerfile : ./apps/reservations/dockerfile
-    command : npm run start reservations
+
